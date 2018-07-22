@@ -17,9 +17,9 @@ public class StudentDao {
     static {
         students = new HashMap<Integer, Student>(){
             {
-                put(1, new Student(1, "Said", "Computer Science"));
-                put(2, new Student(2, "Said", "Computer Science"));
-                put(3, new Student(3, "Said", "Computer Science"));
+                put(1, new Student(1, "Name1", "Computer Science"));
+                put(2, new Student(2, "Name2", "Computer Science"));
+                put(3, new Student(3, "Name3", "Computer Science"));
             }
         };
     }
