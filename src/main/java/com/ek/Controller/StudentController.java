@@ -17,7 +17,7 @@ public class StudentController {
 
     @RequestMapping(value = "/")
     public String welcome(ModelMap model){
-        model.put("content", "test");
+        model.put("content", studentService.getAllStudents());
         return "students";
     }
 
