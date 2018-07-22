@@ -1,5 +1,6 @@
 package com.ek.Controller;
 
+import com.ek.Entity.Page;
 import com.ek.Entity.Student;
 import com.ek.Service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Created by eK14u on 7/22/2018.
@@ -22,7 +24,8 @@ public class StudentController {
 
     @RequestMapping(value = "/")
     public String welcome(ModelMap model){
-        model.put("content", studentService.getAllStudents());
+        Collection<Student> students = studentService.getAllStudents();
+        model.put("content", students);
         return "students";
     }
 

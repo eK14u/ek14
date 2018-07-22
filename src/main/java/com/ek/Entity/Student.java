@@ -1,8 +1,11 @@
 package com.ek.Entity;
 
+import javax.persistence.Entity;
+
 /**
  * Created by eK14u on 7/22/2018.
  */
+@Entity
 public class Student {
 
     private int id;
